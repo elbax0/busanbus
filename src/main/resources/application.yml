@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/busanbus?serverTimezon=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: validate
+    show-sql: true
+    open-in-view: false
+
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+
+BUSAN_BIMS_API_SERVICE_KEY: ${BUSAN_BIMS_API_SERVICE_KEY}
+NCP_API_KEY_ID : ${X_NCP_APIGW_API_KEY_ID}
+NCP_API_KEY:  ${X_NCP_APIGW_API_KEY}
